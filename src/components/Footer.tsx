@@ -47,14 +47,6 @@ const Footer = () => {
         {/* Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} Roichman Tech. Todos os direitos reservados.</p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-primary transition-colors">
-              Política de Privacidade
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              Termos de Uso
-            </a>
-          </div>
         </div>
       </div>
     </footer>
