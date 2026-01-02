@@ -1,18 +1,18 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { Footer } from "./footer";
-import { Header } from "./header";
+import { Footer } from './footer';
+import { Header } from './header';
 
 interface LayoutProps {
-	children: ReactNode;
+  children: ReactNode;
 }
 
 export function Layout({ children }: LayoutProps) {
-	return (
-		<div className="min-h-screen bg-background">
-			<Header />
-			<main>{children}</main>
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
 }
