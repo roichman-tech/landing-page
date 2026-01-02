@@ -5,7 +5,6 @@ export function Footer() {
 		<footer className="py-12 bg-secondary/30 border-t border-border/50">
 			<div className="container">
 				<div className="flex flex-col md:flex-row items-center justify-between gap-8">
-					{/* Logo & Info */}
 					<div className="flex flex-col items-center md:items-start gap-4">
 						<img
 							src="/images/logo.webp"
@@ -21,7 +20,6 @@ export function Footer() {
 						</p>
 					</div>
 
-					{/* Contact links */}
 					<div className="flex flex-col items-center md:items-end gap-3">
 						<h3 className="text-sm font-semibold text-foreground">Contato</h3>
 						<div className="flex flex-col items-center md:items-end gap-1 text-sm text-muted-foreground">
@@ -41,10 +39,8 @@ export function Footer() {
 					</div>
 				</div>
 
-				{/* Divider */}
 				<div className="my-8 h-px bg-border" />
 
-				{/* Copyright */}
 				<div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
 					<p>© {currentYear} Roichman Tech. Todos os direitos reservados.</p>
 				</div>

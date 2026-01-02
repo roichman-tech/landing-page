@@ -27,7 +27,6 @@ export function Header() {
 					/>
 				</a>
 
-				{/* Desktop Navigation */}
 				<nav className="hidden md:flex items-center gap-8">
 					{navLinks.map((link) => (
 						<a
@@ -43,7 +42,6 @@ export function Header() {
 					</Button>
 				</nav>
 
-				{/* Mobile Menu Button */}
 				<button
 					type="button"
 					className="md:hidden p-2 text-foreground"
@@ -54,7 +52,6 @@ export function Header() {
 				</button>
 			</div>
 
-			{/* Mobile Navigation */}
 			{isMenuOpen && (
 				<nav className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-4 animate-fade-in">
 					<div className="flex flex-col gap-4">

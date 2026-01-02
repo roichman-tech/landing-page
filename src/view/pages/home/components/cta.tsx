@@ -8,7 +8,6 @@ export function CTA() {
 			id="contato"
 			className="py-24 md:py-32 bg-background relative overflow-hidden"
 		>
-			{/* Background decoration */}
 			<div className="absolute inset-0 pointer-events-none">
 				<div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 				<div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
@@ -16,7 +15,6 @@ export function CTA() {
 
 			<div className="container relative z-10">
 				<div className="max-w-3xl mx-auto text-center">
-					{/* Content */}
 					<span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">
 						Pronto para Começar?
 					</span>
@@ -28,7 +26,6 @@ export function CTA() {
 						entender seu desafio e mostrar como podemos ajudar.
 					</p>
 
-					{/* CTA buttons */}
 					<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
 						<Button variant="hero" asChild>
 							<a href="mailto:contact@roichman.tech">
@@ -38,7 +35,6 @@ export function CTA() {
 						</Button>
 					</div>
 
-					{/* Trust message */}
 					<p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
 						<span className="w-2 h-2 rounded-full bg-accent" />
 						Respondemos em até 24 horas

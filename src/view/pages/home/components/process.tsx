@@ -35,7 +35,6 @@ export function Process() {
 	return (
 		<section id="processo" className="py-24 md:py-32 bg-secondary/30">
 			<div className="container">
-				{/* Section header */}
 				<div className="max-w-2xl mx-auto text-center mb-16">
 					<span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">
 						Nosso Processo
@@ -49,9 +48,7 @@ export function Process() {
 					</p>
 				</div>
 
-				{/* Process steps */}
 				<div className="relative max-w-4xl mx-auto">
-					{/* Connecting line */}
 					<div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
 
 					<div className="space-y-12 md:space-y-0">
@@ -63,7 +60,6 @@ export function Process() {
 								}`}
 								style={{ animationDelay: `${index * 0.15}s` }}
 							>
-								{/* Content side */}
 								<div
 									className={`${index % 2 === 0 ? "md:text-right md:pr-12" : "md:order-2 md:pl-12 md:text-left"}`}
 								>
@@ -82,7 +78,6 @@ export function Process() {
 									</p>
 								</div>
 
-								{/* Icon/center point */}
 								<div
 									className={`hidden md:flex ${index % 2 === 0 ? "md:order-2 justify-start pl-12" : "justify-end pr-12"}`}
 								>
@@ -93,7 +88,6 @@ export function Process() {
 												className="text-primary-foreground"
 											/>
 										</div>
-										{/* Center dot on the line */}
 										<div
 											className="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background shadow-sm hidden md:block"
 											style={{
@@ -104,7 +98,6 @@ export function Process() {
 									</div>
 								</div>
 
-								{/* Mobile icon */}
 								<div className="md:hidden flex justify-center my-6">
 									<div className="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center shadow-soft">
 										<step.icon size={28} className="text-primary-foreground" />

@@ -5,7 +5,6 @@ import { Button } from "@/view/components/ui/button";
 export function Hero() {
 	return (
 		<section className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
-			{/* Background decorations */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div
 					className="circuit-line h-48 top-32 left-[15%] animate-pulse-soft"
@@ -31,7 +30,6 @@ export function Hero() {
 
 			<div className="container relative z-10">
 				<div className="max-w-3xl mx-auto text-center">
-					{/* Badge */}
 					<div
 						className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-sm text-muted-foreground mb-8 opacity-0 animate-fade-in"
 						style={{ animationDelay: "0.1s" }}
@@ -40,7 +38,6 @@ export function Hero() {
 						Engenharia de software com excelência
 					</div>
 
-					{/* Headline */}
 					<h1
 						className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 opacity-0 animate-fade-in"
 						style={{ animationDelay: "0.2s" }}
@@ -49,7 +46,6 @@ export function Hero() {
 						<span className="text-gradient">Parceiro que entrega.</span>
 					</h1>
 
-					{/* Subheadline */}
 					<p
 						className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in"
 						style={{ animationDelay: "0.3s" }}
@@ -58,7 +54,6 @@ export function Hero() {
 						qualidade, prazos e resultados de longo prazo.
 					</p>
 
-					{/* CTA Buttons */}
 					<div
 						className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 opacity-0 animate-fade-in"
 						style={{ animationDelay: "0.4s" }}
@@ -74,7 +69,6 @@ export function Hero() {
 						</Button>
 					</div>
 
-					{/* Trust indicators */}
 					<div
 						className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-0 animate-fade-in"
 						style={{ animationDelay: "0.5s" }}
@@ -101,7 +95,6 @@ export function Hero() {
 				</div>
 			</div>
 
-			{/* Bottom gradient fade */}
 			<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 		</section>
 	);
