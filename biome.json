@@ -51,6 +51,15 @@
             "noUnusedImports": "off"
           }
         }
+      },
+      "assist": {
+        "actions": {
+          "source": {
+            "organizeImports": {
+              "level": "off"
+            }
+          }
+        }
       }
     }
   ],
