@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.webp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +16,7 @@ const Header = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="flex items-center">
           <img
-            src={logo}
+            src="/images/logo.webp"
             fetchPriority="high"
             width={235}
             height={56}

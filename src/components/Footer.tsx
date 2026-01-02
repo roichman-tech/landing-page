@@ -1,5 +1,3 @@
-import logo from "@/assets/logo.webp";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -10,7 +8,7 @@ const Footer = () => {
           {/* Logo & Info */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <img 
-              src={logo}
+              src="/images/logo.webp"
               width={235}
               height={56}
               alt="Roichman Tech" 
