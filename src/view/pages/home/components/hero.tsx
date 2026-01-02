@@ -1,7 +1,7 @@
 import { ArrowRight, Code2, Shield, Zap } from "lucide-react";
 import { Button } from "@/view/components/ui/button";
 
-function Hero() {
+export function Hero() {
 	return (
 		<section className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
 			{/* Background decorations */}
@@ -104,6 +104,4 @@ function Hero() {
 			<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 		</section>
 	);
-};
-
-export default Hero;
+}

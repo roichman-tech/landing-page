@@ -8,7 +8,7 @@ const navLinks = [
 	{ href: "#contato", label: "Contato" },
 ];
 
-function Header() {
+export function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
@@ -74,6 +74,4 @@ function Header() {
 			)}
 		</header>
 	);
-};
-
-export default Header;
+}

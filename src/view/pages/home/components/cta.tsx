@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import { Button } from "@/view/components/ui/button";
 
-function CTA() {
+export function CTA() {
 	return (
 		<section
 			id="contato"
@@ -46,6 +46,4 @@ function CTA() {
 			</div>
 		</section>
 	);
-};
-
-export default CTA;
+}

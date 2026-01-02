@@ -1,7 +1,5 @@
-import Index from "./view/pages/home";
+import { HomePage } from "./view/pages/home";
 
-function App() {
-	return <Index />;
+export function App() {
+	return <HomePage />;
 }
-
-export default App;

@@ -46,7 +46,7 @@ const solutions = [
 	},
 ];
 
-function Solutions() {
+export function Solutions() {
 	return (
 		<section id="solucoes" className="py-24 md:py-32 bg-background">
 			<div className="container">
@@ -93,6 +93,4 @@ function Solutions() {
 			</div>
 		</section>
 	);
-};
-
-export default Solutions;
+}

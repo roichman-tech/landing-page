@@ -1,10 +1,10 @@
-import Layout from "@/view/layouts/Layout";
-import CTA from "@/view/pages/home/components/cta";
-import Hero from "@/view/pages/home/components/hero";
-import Process from "@/view/pages/home/components/process";
-import Solutions from "@/view/pages/home/components/solutions";
+import { Layout } from "@/view/layouts/Layout";
+import { CTA } from "@/view/pages/home/components/CTA";
+import { Hero } from "@/view/pages/home/components/Hero";
+import { Process } from "@/view/pages/home/components/Process";
+import { Solutions } from "@/view/pages/home/components/Solutions";
 
-function Index() {
+export function HomePage() {
 	return (
 		<Layout>
 			<Hero />
@@ -13,6 +13,4 @@ function Index() {
 			<CTA />
 		</Layout>
 	);
-};
-
-export default Index;
+}

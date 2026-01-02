@@ -31,7 +31,7 @@ const steps = [
 	},
 ];
 
-function Process() {
+export function Process() {
 	return (
 		<section id="processo" className="py-24 md:py-32 bg-secondary/30">
 			<div className="container">
@@ -117,6 +117,4 @@ function Process() {
 			</div>
 		</section>
 	);
-};
-
-export default Process;
+}

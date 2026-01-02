@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 interface LayoutProps {
 	children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+export function Layout({ children }: LayoutProps) {
 	return (
 		<div className="min-h-screen bg-background">
 			<Header />
@@ -14,6 +14,4 @@ const Layout = ({ children }: LayoutProps) => {
 			<Footer />
 		</div>
 	);
-};
-
-export default Layout;
+}
