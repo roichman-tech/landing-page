@@ -9,7 +9,8 @@ bun install
 bun dev       # start Vite dev server
 bun run build # production build
 bun preview   # preview the production build locally
-bun run lint  # eslint
+bun lint  # Biome linter
+bun format # Biome formatter
 ```
 
 Bun 1.1+ recommended. Vite dev server runs on port 5173 by default.
