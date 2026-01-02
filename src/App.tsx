@@ -1,5 +1,7 @@
-import Index from "./pages/Index";
+import Index from "./view/pages/home";
 
-const App = () => <Index />;
+function App() {
+	return <Index />;
+}
 
 export default App;

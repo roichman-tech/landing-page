@@ -31,7 +31,7 @@ const steps = [
 	},
 ];
 
-const Process = () => {
+function Process() {
 	return (
 		<section id="processo" className="py-24 md:py-32 bg-secondary/30">
 			<div className="container">

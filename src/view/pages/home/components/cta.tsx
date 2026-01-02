@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/view/components/ui/button";
 
-const CTA = () => {
+function CTA() {
 	return (
 		<section
 			id="contato"

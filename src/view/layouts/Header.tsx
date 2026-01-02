@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/view/components/ui/button";
 
 const navLinks = [
 	{ href: "#solucoes", label: "Soluções" },
@@ -8,7 +8,7 @@ const navLinks = [
 	{ href: "#contato", label: "Contato" },
 ];
 
-const Header = () => {
+function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (

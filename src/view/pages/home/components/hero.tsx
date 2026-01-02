@@ -1,7 +1,7 @@
 import { ArrowRight, Code2, Shield, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/view/components/ui/button";
 
-const Hero = () => {
+function Hero() {
 	return (
 		<section className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
 			{/* Background decorations */}
