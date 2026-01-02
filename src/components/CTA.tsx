@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CTA = () => {

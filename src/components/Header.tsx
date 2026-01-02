@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const navLinks = [
+  { href: "#solucoes", label: "Soluções" },
+  { href: "#processo", label: "Processo" },
+  { href: "#contato", label: "Contato" },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navLinks = [
-    { href: "#solucoes", label: "Soluções" },
-    { href: "#processo", label: "Processo" },
-    { href: "#contato", label: "Contato" },
-  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
