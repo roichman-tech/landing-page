@@ -10,7 +10,9 @@ const Footer = () => {
           {/* Logo & Info */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <img 
-              src={logo} 
+              src={logo}
+              width={235}
+              height={56}
               alt="Roichman Tech" 
               className="h-8 w-auto"
             />

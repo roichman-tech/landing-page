@@ -16,8 +16,10 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="flex items-center">
-          <img 
+          <img
             src={logo} 
+            width={235}
+            height={56}
             alt="Roichman Tech" 
             className="h-8 md:h-10 w-auto"
           />
