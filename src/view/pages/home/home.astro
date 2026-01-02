@@ -1,0 +1,29 @@
+---
+import type { HomeTranslations } from '@/app/i18n/home';
+
+import { CTA } from '@/view/pages/home/components/cta';
+import { Hero } from '@/view/pages/home/components/hero';
+import { Process } from '@/view/pages/home/components/process';
+import { Solutions } from '@/view/pages/home/components/solutions';
+
+import Layout from '@/layouts/layout.astro';
+
+interface HomePageProps {
+  translations: HomeTranslations;
+}
+
+const { translations } = Astro.props as HomePageProps;
+---
+
+<Layout
+  lang={translations.lang}
+  meta={translations.meta}
+  header={translations.header}
+  footer={translations.footer}
+  alternates={translations.alternates}
+>
+  <Hero content={translations.hero} />
+  <Solutions content={translations.solutions} />
+  <Process content={translations.process} />
+  <CTA content={translations.cta} />
+</Layout>

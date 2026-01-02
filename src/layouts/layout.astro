@@ -1,36 +1,91 @@
 ---
 import '@/styles/global.css';
 
+import type {
+  AlternateLink,
+  FooterContent,
+  HeaderContent,
+  MetaContent,
+} from '@/app/i18n/home';
+
 import { Footer } from '@/view/layouts/footer';
 import { Header } from '@/view/layouts/header';
+
+interface LayoutProps {
+  lang?: string;
+  meta?: MetaContent;
+  header?: HeaderContent;
+  footer?: FooterContent;
+  alternates?: AlternateLink[];
+}
+
+const defaultMeta: MetaContent = {
+  title:
+    'Roichman Tech | Software House - Desenvolvimento de Software Sob Medida',
+  description:
+    'Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo. Sistemas web, apps mobile, integrações e mais.',
+  ogTitle: 'Roichman Tech | Software House',
+  ogDescription:
+    'Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo.',
+  twitterTitle: 'Roichman Tech | Software House',
+  twitterDescription:
+    'Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo.',
+};
+
+const {
+  lang = 'pt-BR',
+  meta = defaultMeta,
+  header,
+  footer,
+  alternates = [],
+} = Astro.props as LayoutProps;
+
+const resolvedMeta = {
+  ...defaultMeta,
+  ...meta,
+  ogTitle: meta.ogTitle ?? meta.title,
+  ogDescription: meta.ogDescription ?? meta.description,
+  twitterTitle: meta.twitterTitle ?? meta.title,
+  twitterDescription: meta.twitterDescription ?? meta.description,
+};
+
+const headerProps =
+  header ??
+  ({
+    navLinks: [],
+    ctaHref: '#',
+    ctaLabel: '',
+    languageSwitch: { label: '', href: '/', ariaLabel: '', flag: 'br' },
+    menuLabel: 'Menu',
+  } satisfies HeaderContent);
+
+const footerProps =
+  footer ??
+  ({
+    tagline: 'Roichman Tech',
+    location: '',
+    contactHeading: 'Contato',
+    rights: 'Roichman Tech',
+  } satisfies FooterContent);
 ---
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roichman Tech | Software House - Desenvolvimento de Software Sob Medida</title>
-    <meta
-      name="description"
-      content="Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo. Sistemas web, apps mobile, integrações e mais."
-    />
+    <title>{resolvedMeta.title}</title>
+    <meta name="description" content={resolvedMeta.description} />
     <meta name="author" content="Roichman Tech" />
     <meta name="theme-color" content="#0070b8" />
 
-    <meta property="og:title" content="Roichman Tech | Software House" />
-    <meta
-      property="og:description"
-      content="Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo."
-    />
+    <meta property="og:title" content={resolvedMeta.ogTitle} />
+    <meta property="og:description" content={resolvedMeta.ogDescription} />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Roichman Tech | Software House" />
-    <meta
-      name="twitter:description"
-      content="Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo."
-    />
+    <meta name="twitter:title" content={resolvedMeta.twitterTitle} />
+    <meta name="twitter:description" content={resolvedMeta.twitterDescription} />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preload" href="/fonts/inter-variable.ttf" as="font" type="font/ttf" crossorigin>
@@ -39,19 +94,22 @@ import { Header } from '@/view/layouts/header';
       rel="preload"
       as="image"
       href="/images/logo.webp"
-      imagesrcset="/images/logo.webp 1x, /images/logo@2x.png 2x"
+      imagesrcset="/images/logo.webp"
       imagesizes="(min-width: 768px) 168px, 134px"
       fetchpriority="high"
       crossorigin
     />
+    {alternates.map((alternate) => (
+      <link rel="alternate" hreflang={alternate.lang} href={alternate.href} />
+    ))}
   </head>
   <body class="bg-background text-foreground font-sans antialiased">
-    <Header client:load />
+    <Header content={headerProps} client:load />
 
     <main>
       <slot />
     </main>
 
-    <Footer />
+    <Footer content={footerProps} />
   </body>
 </html>

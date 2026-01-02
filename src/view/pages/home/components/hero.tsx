@@ -1,8 +1,14 @@
-import { ArrowRight, Code2, Shield, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
+import type { HeroContent } from '@/app/i18n/home';
 
 import { Button } from '@/view/components/ui/button';
 
-export function Hero() {
+interface HeroProps {
+  content: HeroContent;
+}
+
+export function Hero({ content }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -35,23 +41,22 @@ export function Hero() {
             style={{ animationDelay: '0.1s' }}
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            Engenharia de software com excelência
+            {content.badge}
           </div>
 
           <h1
             className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 opacity-0 animate-fade-in"
             style={{ animationDelay: '0.2s' }}
           >
-            Software que funciona.{' '}
-            <span className="text-gradient">Parceiro que entrega.</span>
+            {content.title}{' '}
+            <span className="text-gradient">{content.highlight}</span>
           </h1>
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
-            Desenvolvemos soluções sob medida para o seu negócio, com foco em
-            qualidade, prazos e resultados de longo prazo.
+            {content.description}
           </p>
 
           <div
@@ -59,13 +64,15 @@ export function Hero() {
             style={{ animationDelay: '0.4s' }}
           >
             <Button variant="hero" asChild>
-              <a href="#contato">
-                Iniciar Projeto
+              <a href={content.primaryCta.href}>
+                {content.primaryCta.label}
                 <ArrowRight className="ml-2" size={18} />
               </a>
             </Button>
             <Button variant="hero-outline" asChild>
-              <a href="#solucoes">Ver Soluções</a>
+              <a href={content.secondaryCta.href}>
+                {content.secondaryCta.label}
+              </a>
             </Button>
           </div>
 
@@ -73,24 +80,17 @@ export function Hero() {
             className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-0 animate-fade-in"
             style={{ animationDelay: '0.5s' }}
           >
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center">
-                <Code2 size={20} className="text-primary" />
+            {content.features.map((feature) => (
+              <div
+                key={feature.label}
+                className="flex items-center gap-3 text-muted-foreground"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center">
+                  <feature.icon size={20} className="text-primary" />
+                </div>
+                <span className="text-sm font-medium">{feature.label}</span>
               </div>
-              <span className="text-sm font-medium">Código Limpo</span>
-            </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center">
-                <Zap size={20} className="text-primary" />
-              </div>
-              <span className="text-sm font-medium">Entrega Rápida</span>
-            </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center">
-                <Shield size={20} className="text-primary" />
-              </div>
-              <span className="text-sm font-medium">Suporte Contínuo</span>
-            </div>
+            ))}
           </div>
         </div>
       </div>
