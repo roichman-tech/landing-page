@@ -1,4 +1,4 @@
-import { Layout } from "@/view/layouts/Layout";
+import { Layout } from "@/view/layouts/layout-a";
 import { CTA } from "@/view/pages/home/components/CTA";
 import { Hero } from "@/view/pages/home/components/Hero";
 import { Process } from "@/view/pages/home/components/Process";
