@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* Contact links */}
           <div className="flex flex-col items-center md:items-end gap-3">
-            <h4 className="text-sm font-semibold text-foreground">Contato</h4>
+            <h3 className="text-sm font-semibold text-foreground">Contato</h3>
             <div className="flex flex-col items-center md:items-end gap-1 text-sm text-muted-foreground">
               <a 
                 href="mailto:contact@roichman.tech" 
