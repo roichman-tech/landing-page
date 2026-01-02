@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Solutions from "@/components/Solutions";
-import Process from "@/components/Process";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Process from "@/components/Process";
+import Solutions from "@/components/Solutions";
 
 const Index = () => {
 	return (

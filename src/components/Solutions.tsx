@@ -1,10 +1,10 @@
 import {
-	Globe,
-	Smartphone,
-	Database,
 	BarChart3,
-	ShoppingCart,
 	Cloud,
+	Database,
+	Globe,
+	ShoppingCart,
+	Smartphone,
 } from "lucide-react";
 
 const solutions = [

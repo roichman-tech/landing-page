@@ -9,6 +9,7 @@
 		"build:dev": "vite build --mode development",
 		"lint": "biome lint .",
 		"format": "biome format --write .",
+		"check": "biome check .",
 		"preview": "vite preview"
 	},
 	"dependencies": {

@@ -1,4 +1,4 @@
-import { MessageSquare, Lightbulb, Code, Rocket } from "lucide-react";
+import { Code, Lightbulb, MessageSquare, Rocket } from "lucide-react";
 
 const steps = [
 	{
