@@ -1,58 +1,28 @@
-import { Code, Lightbulb, MessageSquare, Rocket } from 'lucide-react';
+import type { ProcessContent } from '@/app/i18n/home';
 
-const steps = [
-  {
-    icon: MessageSquare,
-    number: '01',
-    title: 'Entendimento',
-    description:
-      'Ouvimos suas necessidades, mapeamos desafios e definimos objetivos claros para o projeto.',
-  },
-  {
-    icon: Lightbulb,
-    number: '02',
-    title: 'Planejamento',
-    description:
-      'Criamos um roadmap detalhado com entregas incrementais, prazos realistas e comunicação transparente.',
-  },
-  {
-    icon: Code,
-    number: '03',
-    title: 'Desenvolvimento',
-    description:
-      'Construímos o software com código limpo, testes automatizados e revisões constantes de qualidade.',
-  },
-  {
-    icon: Rocket,
-    number: '04',
-    title: 'Lançamento & Suporte',
-    description:
-      'Entregamos o produto final e permanecemos ao seu lado para evoluções e manutenção contínua.',
-  },
-];
+interface ProcessProps {
+  content: ProcessContent;
+}
 
-export function Process() {
+export function Process({ content }: ProcessProps) {
   return (
-    <section id="processo" className="py-24 md:py-32 bg-secondary/30">
+    <section id={content.id} className="py-24 md:py-32 bg-secondary/30">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">
-            Nosso Processo
+            {content.badge}
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Previsibilidade em cada etapa
+            {content.heading}
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Um processo estruturado que garante resultados consistentes e
-            elimina surpresas.
-          </p>
+          <p className="text-lg text-muted-foreground">{content.subheading}</p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
 
           <div className="space-y-12 md:space-y-0">
-            {steps.map((step, index) => (
+            {content.steps.map((step, index) => (
               <div
                 key={step.number}
                 className={`relative md:grid md:grid-cols-2 md:gap-12 items-center opacity-0 animate-fade-in ${

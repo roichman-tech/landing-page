@@ -2,16 +2,26 @@ import { useState } from 'react';
 
 import { Menu, X } from 'lucide-react';
 
+import type { HeaderContent } from '@/app/i18n/home';
+
 import { Button } from '@/view/components/ui/button';
 
-const navLinks = [
-  { href: '#solucoes', label: 'Soluções' },
-  { href: '#processo', label: 'Processo' },
-  { href: '#contato', label: 'Contato' },
-];
+import { BrFlag } from '@/assets/icons/br-flag';
+import { UsFlag } from '@/assets/icons/us-flag';
 
-export function Header() {
+interface HeaderProps {
+  content: HeaderContent;
+}
+
+const flags = {
+  us: UsFlag,
+  br: BrFlag,
+};
+
+export function Header({ content }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const Flag = flags[content.languageSwitch.flag] ?? BrFlag;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -27,8 +37,8 @@ export function Header() {
           />
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+        <nav className="hidden md:flex items-center gap-6">
+          {content.navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -37,10 +47,26 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <a href="#contato">
+
+          <a href={content.ctaHref}>
             <Button variant="default" size="sm">
-              Fale Conosco
+              {content.ctaLabel}
             </Button>
+          </a>
+
+          <a
+            href={content.languageSwitch.href}
+            className="text-base font-semibold text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
+            aria-label={content.languageSwitch.ariaLabel}
+            title={content.languageSwitch.label}
+          >
+            <span className="inline-flex">
+              <Flag
+                className="size-5"
+                aria-label={content.languageSwitch.label}
+              />
+            </span>
+            <span className="sr-only">{content.languageSwitch.label}</span>
           </a>
         </nav>
 
@@ -48,7 +74,7 @@ export function Header() {
           type="button"
           className="md:hidden p-2 text-foreground"
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          aria-label="Toggle menu"
+          aria-label={content.menuLabel}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -57,7 +83,7 @@ export function Header() {
       {isMenuOpen && (
         <nav className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-4 animate-fade-in">
           <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {content.navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -67,13 +93,28 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <a href="#contato" className="w-full">
+            <a
+              href={content.languageSwitch.href}
+              className="text-base font-semibold text-primary hover:text-primary/80 transition-colors py-2 flex items-center gap-2"
+              aria-label={content.languageSwitch.ariaLabel}
+              onClick={() => setIsMenuOpen(false)}
+              title={content.languageSwitch.label}
+            >
+              <span className="inline-flex">
+                <Flag
+                  className="size-6"
+                  aria-label={content.languageSwitch.label}
+                />
+              </span>
+              <span className="sr-only">{content.languageSwitch.label}</span>
+            </a>
+            <a href={content.ctaHref} className="w-full">
               <Button
                 variant="default"
                 className="w-full mt-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Fale Conosco
+                {content.ctaLabel}
               </Button>
             </a>
           </div>

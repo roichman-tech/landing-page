@@ -1,4 +1,10 @@
-export function Footer() {
+import type { FooterContent } from '@/app/i18n/home';
+
+interface FooterProps {
+  content: FooterContent;
+}
+
+export function Footer({ content }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,14 +20,16 @@ export function Footer() {
               className="h-8 w-auto"
             />
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              Engenharia de software com excelência.
+              {content.tagline}
               <br />
-              Nova Russas, Ceará · Clientes no mundo todo.
+              {content.location}
             </p>
           </div>
 
           <div className="flex flex-col items-center md:items-end gap-3">
-            <h3 className="text-sm font-semibold text-foreground">Contato</h3>
+            <h3 className="text-sm font-semibold text-foreground">
+              {content.contactHeading}
+            </h3>
             <div className="flex flex-col items-center md:items-end gap-1 text-sm text-muted-foreground">
               <a
                 href="mailto:contact@roichman.tech"
@@ -42,7 +50,9 @@ export function Footer() {
         <div className="my-8 h-px bg-border" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {currentYear} Roichman Tech. Todos os direitos reservados.</p>
+          <p>
+            © {currentYear} {content.rights}
+          </p>
         </div>
       </div>
     </footer>

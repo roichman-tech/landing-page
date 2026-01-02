@@ -1,70 +1,25 @@
-import {
-  BarChart3,
-  Cloud,
-  Database,
-  Globe,
-  ShoppingCart,
-  Smartphone,
-} from 'lucide-react';
+import type { SolutionsContent } from '@/app/i18n/home';
 
-const solutions = [
-  {
-    icon: Globe,
-    title: 'Sistemas Web',
-    description:
-      'Aplicações web robustas e escaláveis para digitalizar processos e aumentar a eficiência do seu negócio.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Apps Mobile',
-    description:
-      'Aplicativos nativos e híbridos para iOS e Android, com foco em usabilidade e performance.',
-  },
-  {
-    icon: Database,
-    title: 'Integrações & APIs',
-    description:
-      'Conectamos seus sistemas existentes, automatizando fluxos e eliminando trabalho manual repetitivo.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Dashboards & BI',
-    description:
-      'Painéis analíticos que transformam dados em insights acionáveis para tomada de decisão.',
-  },
-  {
-    icon: ShoppingCart,
-    title: 'E-commerce',
-    description:
-      'Lojas virtuais completas e personalizadas, integradas a meios de pagamento e logística.',
-  },
-  {
-    icon: Cloud,
-    title: 'Infraestrutura Cloud',
-    description:
-      'Migração e gestão de ambientes em nuvem com foco em segurança, disponibilidade e custo-benefício.',
-  },
-];
+interface SolutionsProps {
+  content: SolutionsContent;
+}
 
-export function Solutions() {
+export function Solutions({ content }: SolutionsProps) {
   return (
-    <section id="solucoes" className="py-24 md:py-32 bg-background">
+    <section id={content.id} className="py-24 md:py-32 bg-background">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider mb-4 block">
-            Soluções
+            {content.badge}
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Tecnologia sob medida para cada desafio
+            {content.heading}
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Desenvolvemos soluções que se adaptam à sua realidade, não o
-            contrário.
-          </p>
+          <p className="text-lg text-muted-foreground">{content.subheading}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {solutions.map((solution, index) => (
+          {content.items.map((solution, index) => (
             <article
               key={solution.title}
               className="group relative p-8 rounded-2xl gradient-card border border-border/50 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 opacity-0 animate-fade-in"
