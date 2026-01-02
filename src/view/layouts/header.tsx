@@ -60,8 +60,8 @@ export function Header({ content }: HeaderProps) {
             aria-label={content.languageSwitch.ariaLabel}
             title={content.languageSwitch.label}
           >
-            <span aria-hidden className="inline-flex">
-              <Flag className="size-5" />
+            <span className="inline-flex">
+              <Flag className="size-5" aria-label={content.languageSwitch.label} />
             </span>
             <span className="sr-only">{content.languageSwitch.label}</span>
           </a>
@@ -97,8 +97,8 @@ export function Header({ content }: HeaderProps) {
               onClick={() => setIsMenuOpen(false)}
               title={content.languageSwitch.label}
             >
-              <span aria-hidden className="inline-flex">
-                <Flag className="size-6" />
+              <span className="inline-flex">
+                <Flag className="size-6" aria-label={content.languageSwitch.label} />
               </span>
               <span className="sr-only">{content.languageSwitch.label}</span>
             </a>

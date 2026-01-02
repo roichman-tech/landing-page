@@ -10,8 +10,7 @@ export function UsFlag(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 36 36"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      aria-hidden="true"
-      role="img"
+      aria-hidden
       preserveAspectRatio="xMidYMid meet"
       {...rest}
     >
