@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+
 import { Button } from "@/view/components/ui/button";
 
 export function CTA() {

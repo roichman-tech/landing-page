@@ -27,7 +27,26 @@
 		"enabled": true,
 		"actions": {
 			"source": {
-				"organizeImports": "on"
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [
+							["react", "react-dom"],
+							":BLANK_LINE:",
+							":PACKAGE:",
+							":BLANK_LINE:",
+							":NODE:",
+							":BLANK_LINE:",
+							"@/app/**",
+							":BLANK_LINE:",
+							"@/view/**",
+							":BLANK_LINE:",
+							":PATH:",
+							":BLANK_LINE:",
+							"**"
+						]
+					}
+				}
 			}
 		}
 	}

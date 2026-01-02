@@ -1,5 +1,7 @@
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
+
+import { Menu, X } from "lucide-react";
+
 import { Button } from "@/view/components/ui/button";
 
 const navLinks = [
@@ -45,7 +47,7 @@ export function Header() {
 				<button
 					type="button"
 					className="md:hidden p-2 text-foreground"
-					onClick={() => setIsMenuOpen(!isMenuOpen)}
+					onClick={() => setIsMenuOpen((prev) => !prev)}
 					aria-label="Toggle menu"
 				>
 					{isMenuOpen ? <X size={24} /> : <Menu size={24} />}

@@ -1,4 +1,5 @@
 import { ArrowRight, Code2, Shield, Zap } from "lucide-react";
+
 import { Button } from "@/view/components/ui/button";
 
 export function Hero() {

@@ -26,6 +26,17 @@ Bun 1.1+ recommended. Vite dev server runs on port 5173 by default.
 - `src/components/` – UI sections (Header, Hero, Solutions, Process, CTA, Footer)
 - `src/components/ui/button.tsx` – shared button variant
 
+## Import Order (convention)
+
+Group imports with blank lines in this order so `biome check` can keep them tidy:
+1) react / react-dom
+2) External packages
+3) `node:` built-ins
+4) `@/app` aliases
+5) `@/view` aliases
+6) Local relative imports
+7) Anything else
+
 ## Notes
 
 - Fonts live in `public/fonts/` with their OFL licenses.
