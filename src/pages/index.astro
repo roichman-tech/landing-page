@@ -1,0 +1,53 @@
+---
+import "@/styles/global.css";
+import { CTA } from "@/view/pages/home/components/cta";
+import { Hero } from "@/view/pages/home/components/hero";
+import { Process } from "@/view/pages/home/components/process";
+import { Solutions } from "@/view/pages/home/components/solutions";
+import { Footer } from "@/view/layouts/footer";
+import { Header } from "@/view/layouts/header";
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Roichman Tech | Software House - Desenvolvimento de Software Sob Medida</title>
+		<meta
+			name="description"
+			content="Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo. Sistemas web, apps mobile, integrações e mais."
+		/>
+		<meta name="author" content="Roichman Tech" />
+		<meta name="theme-color" content="#0070b8" />
+
+		<meta property="og:title" content="Roichman Tech | Software House" />
+		<meta
+			property="og:description"
+			content="Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo."
+		/>
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Roichman Tech | Software House" />
+		<meta
+			name="twitter:description"
+			content="Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo."
+		/>
+
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="preload" href="/fonts/inter-variable.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="/fonts/sora-variable.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="/images/logo.webp" as="image" type="image/webp" fetchpriority="high" crossorigin>
+	</head>
+	<body class="bg-background text-foreground font-sans antialiased">
+		<Header client:load />
+		<main>
+			<Hero />
+			<Solutions />
+			<Process />
+			<CTA />
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -4,10 +4,7 @@ import { Button } from "@/view/components/ui/button";
 
 export function CTA() {
 	return (
-		<section
-			id="contato"
-			className="py-24 md:py-32 bg-background relative overflow-hidden"
-		>
+		<section id="contato" className="py-24 md:py-32 bg-background relative overflow-hidden">
 			<div className="absolute inset-0 pointer-events-none">
 				<div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 				<div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
@@ -22,8 +19,7 @@ export function CTA() {
 						Transforme sua ideia em software de qualidade
 					</h2>
 					<p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-						Entre em contato para uma conversa inicial sem compromisso. Queremos
-						entender seu desafio e mostrar como podemos ajudar.
+						Entre em contato para uma conversa inicial sem compromisso. Queremos entender seu desafio e mostrar como podemos ajudar.
 					</p>
 
 					<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

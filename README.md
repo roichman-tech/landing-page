@@ -19,7 +19,7 @@ Bun 1.1+ recommended. Vite dev server runs on port 5173 by default.
 ## Project Structure
 
 - `index.html` – HTML entry; preloads local fonts and CSS
-- `src/index.css` – Tailwind base/styles and CSS variables
+- `src/styles/global.css` – Tailwind base/styles and CSS variables
 - `src/main.tsx` – mounts the app
 - `src/App.tsx` – renders the landing page
 - `src/pages/` – page components

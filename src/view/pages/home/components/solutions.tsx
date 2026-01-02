@@ -11,38 +11,32 @@ const solutions = [
 	{
 		icon: Globe,
 		title: "Sistemas Web",
-		description:
-			"Aplicações web robustas e escaláveis para digitalizar processos e aumentar a eficiência do seu negócio.",
+		description: "Aplicações web robustas e escaláveis para digitalizar processos e aumentar a eficiência do seu negócio.",
 	},
 	{
 		icon: Smartphone,
 		title: "Apps Mobile",
-		description:
-			"Aplicativos nativos e híbridos para iOS e Android, com foco em usabilidade e performance.",
+		description: "Aplicativos nativos e híbridos para iOS e Android, com foco em usabilidade e performance.",
 	},
 	{
 		icon: Database,
 		title: "Integrações & APIs",
-		description:
-			"Conectamos seus sistemas existentes, automatizando fluxos e eliminando trabalho manual repetitivo.",
+		description: "Conectamos seus sistemas existentes, automatizando fluxos e eliminando trabalho manual repetitivo.",
 	},
 	{
 		icon: BarChart3,
 		title: "Dashboards & BI",
-		description:
-			"Painéis analíticos que transformam dados em insights acionáveis para tomada de decisão.",
+		description: "Painéis analíticos que transformam dados em insights acionáveis para tomada de decisão.",
 	},
 	{
 		icon: ShoppingCart,
 		title: "E-commerce",
-		description:
-			"Lojas virtuais completas e personalizadas, integradas a meios de pagamento e logística.",
+		description: "Lojas virtuais completas e personalizadas, integradas a meios de pagamento e logística.",
 	},
 	{
 		icon: Cloud,
 		title: "Infraestrutura Cloud",
-		description:
-			"Migração e gestão de ambientes em nuvem com foco em segurança, disponibilidade e custo-benefício.",
+		description: "Migração e gestão de ambientes em nuvem com foco em segurança, disponibilidade e custo-benefício.",
 	},
 ];
 
@@ -58,8 +52,7 @@ export function Solutions() {
 						Tecnologia sob medida para cada desafio
 					</h2>
 					<p className="text-lg text-muted-foreground">
-						Desenvolvemos soluções que se adaptam à sua realidade, não o
-						contrário.
+						Desenvolvemos soluções que se adaptam à sua realidade, não o contrário.
 					</p>
 				</div>
 

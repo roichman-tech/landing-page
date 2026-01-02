@@ -5,29 +5,25 @@ const steps = [
 		icon: MessageSquare,
 		number: "01",
 		title: "Entendimento",
-		description:
-			"Ouvimos suas necessidades, mapeamos desafios e definimos objetivos claros para o projeto.",
+		description: "Ouvimos suas necessidades, mapeamos desafios e definimos objetivos claros para o projeto.",
 	},
 	{
 		icon: Lightbulb,
 		number: "02",
 		title: "Planejamento",
-		description:
-			"Criamos um roadmap detalhado com entregas incrementais, prazos realistas e comunicação transparente.",
+		description: "Criamos um roadmap detalhado com entregas incrementais, prazos realistas e comunicação transparente.",
 	},
 	{
 		icon: Code,
 		number: "03",
 		title: "Desenvolvimento",
-		description:
-			"Construímos o software com código limpo, testes automatizados e revisões constantes de qualidade.",
+		description: "Construímos o software com código limpo, testes automatizados e revisões constantes de qualidade.",
 	},
 	{
 		icon: Rocket,
 		number: "04",
 		title: "Lançamento & Suporte",
-		description:
-			"Entregamos o produto final e permanecemos ao seu lado para evoluções e manutenção contínua.",
+		description: "Entregamos o produto final e permanecemos ao seu lado para evoluções e manutenção contínua.",
 	},
 ];
 
@@ -43,8 +39,7 @@ export function Process() {
 						Previsibilidade em cada etapa
 					</h2>
 					<p className="text-lg text-muted-foreground">
-						Um processo estruturado que garante resultados consistentes e
-						elimina surpresas.
+						Um processo estruturado que garante resultados consistentes e elimina surpresas.
 					</p>
 				</div>
 
@@ -60,12 +55,8 @@ export function Process() {
 								}`}
 								style={{ animationDelay: `${index * 0.15}s` }}
 							>
-								<div
-									className={`${index % 2 === 0 ? "md:text-right md:pr-12" : "md:order-2 md:pl-12 md:text-left"}`}
-								>
-									<div
-										className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}
-									>
+								<div className={`${index % 2 === 0 ? "md:text-right md:pr-12" : "md:order-2 md:pl-12 md:text-left"}`}>
+									<div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
 										<span className="text-4xl font-heading font-bold text-primary/70">
 											{step.number}
 										</span>
@@ -78,15 +69,10 @@ export function Process() {
 									</p>
 								</div>
 
-								<div
-									className={`hidden md:flex ${index % 2 === 0 ? "md:order-2 justify-start pl-12" : "justify-end pr-12"}`}
-								>
+								<div className={`hidden md:flex ${index % 2 === 0 ? "md:order-2 justify-start pl-12" : "justify-end pr-12"}`}>
 									<div className="relative">
 										<div className="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center shadow-soft">
-											<step.icon
-												size={28}
-												className="text-primary-foreground"
-											/>
+											<step.icon size={28} className="text-primary-foreground" />
 										</div>
 										<div
 											className="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background shadow-sm hidden md:block"

@@ -6,22 +6,10 @@ export function Hero() {
 	return (
 		<section className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
-				<div
-					className="circuit-line h-48 top-32 left-[15%] animate-pulse-soft"
-					style={{ animationDelay: "0s" }}
-				/>
-				<div
-					className="circuit-line h-32 top-48 left-[25%] animate-pulse-soft"
-					style={{ animationDelay: "0.5s" }}
-				/>
-				<div
-					className="circuit-line h-64 top-24 right-[20%] animate-pulse-soft"
-					style={{ animationDelay: "1s" }}
-				/>
-				<div
-					className="circuit-line h-40 top-40 right-[30%] animate-pulse-soft"
-					style={{ animationDelay: "1.5s" }}
-				/>
+				<div className="circuit-line h-48 top-32 left-[15%] animate-pulse-soft" style={{ animationDelay: "0s" }} />
+				<div className="circuit-line h-32 top-48 left-[25%] animate-pulse-soft" style={{ animationDelay: "0.5s" }} />
+				<div className="circuit-line h-64 top-24 right-[20%] animate-pulse-soft" style={{ animationDelay: "1s" }} />
+				<div className="circuit-line h-40 top-40 right-[30%] animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
 				<div className="circuit-dot top-32 left-[15%]" />
 				<div className="circuit-dot top-48 left-[25%]" />
 				<div className="circuit-dot top-24 right-[20%]" />
@@ -42,16 +30,14 @@ export function Hero() {
 						className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 opacity-0 animate-fade-in"
 						style={{ animationDelay: "0.2s" }}
 					>
-						Software que funciona.{" "}
-						<span className="text-gradient">Parceiro que entrega.</span>
+						Software que funciona. <span className="text-gradient">Parceiro que entrega.</span>
 					</h1>
 
 					<p
 						className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in"
 						style={{ animationDelay: "0.3s" }}
 					>
-						Desenvolvemos soluções sob medida para o seu negócio, com foco em
-						qualidade, prazos e resultados de longo prazo.
+						Desenvolvemos soluções sob medida para o seu negócio, com foco em qualidade, prazos e resultados de longo prazo.
 					</p>
 
 					<div
