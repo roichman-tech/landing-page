@@ -1,12 +1,12 @@
 # Roichman Tech Landing Page
 
-Marketing site built with React, Vite, TypeScript, and Tailwind CSS. Fonts are self-hosted (Inter, Sora) and loaded via a critical CSS link for faster first paint.
+Marketing site built with React, Astro, TypeScript, and Tailwind CSS. Fonts are self-hosted (Inter, Sora) and loaded via a critical CSS link for faster first paint.
 
 ## Getting Started
 
 ```sh
 bun install
-bun dev       # start Vite dev server
+bun dev       # start dev server
 bun run build # production build
 bun preview   # preview the production build locally
 bun lint      # Biome linter
@@ -14,7 +14,7 @@ bun format    # Biome formatter
 bun check     # type-check with Bun
 ```
 
-Bun 1.1+ recommended. Vite dev server runs on port 5173 by default.
+Bun 1.1+ recommended. Astro dev server runs on port 4321 by default.
 
 ## Project Structure
 
