@@ -61,7 +61,10 @@ export function Header({ content }: HeaderProps) {
             title={content.languageSwitch.label}
           >
             <span className="inline-flex">
-              <Flag className="size-5" aria-label={content.languageSwitch.label} />
+              <Flag
+                className="size-5"
+                aria-label={content.languageSwitch.label}
+              />
             </span>
             <span className="sr-only">{content.languageSwitch.label}</span>
           </a>
@@ -98,7 +101,10 @@ export function Header({ content }: HeaderProps) {
               title={content.languageSwitch.label}
             >
               <span className="inline-flex">
-                <Flag className="size-6" aria-label={content.languageSwitch.label} />
+                <Flag
+                  className="size-6"
+                  aria-label={content.languageSwitch.label}
+                />
               </span>
               <span className="sr-only">{content.languageSwitch.label}</span>
             </a>

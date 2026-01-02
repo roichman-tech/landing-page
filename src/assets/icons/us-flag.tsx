@@ -1,4 +1,4 @@
-import type { SVGProps } from "react";
+import type { SVGProps } from 'react';
 
 export function UsFlag(props: SVGProps<SVGSVGElement>) {
   const { width = 24, height = 16, ...rest } = props;
