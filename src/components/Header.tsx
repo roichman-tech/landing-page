@@ -17,7 +17,8 @@ const Header = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="flex items-center">
           <img
-            src={logo} 
+            src={logo}
+            fetchPriority="high"
             width={235}
             height={56}
             alt="Roichman Tech" 
