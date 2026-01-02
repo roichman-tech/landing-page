@@ -62,7 +62,7 @@ const Process = () => {
                 {/* Content side */}
                 <div className={`${index % 2 === 0 ? "md:text-right md:pr-12" : "md:order-2 md:pl-12 md:text-left"}`}>
                   <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
-                    <span className="text-4xl font-heading font-bold text-primary/20">
+                    <span className="text-4xl font-heading font-bold text-primary/70">
                       {step.number}
                     </span>
                   </div>
