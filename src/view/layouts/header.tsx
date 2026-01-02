@@ -37,9 +37,11 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <Button variant="default" size="sm">
-            Fale Conosco
-          </Button>
+          <a href="#contato">
+            <Button variant="default" size="sm">
+              Fale Conosco
+            </Button>
+          </a>
         </nav>
 
         <button
@@ -65,9 +67,15 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <Button variant="default" className="w-full mt-2">
-              Fale Conosco
-            </Button>
+            <a href="#contato" className="w-full">
+              <Button
+                variant="default"
+                className="w-full mt-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Fale Conosco
+              </Button>
+            </a>
           </div>
         </nav>
       )}
