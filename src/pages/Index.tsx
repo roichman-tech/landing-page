@@ -6,18 +6,18 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <Solutions />
-        <Process />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="min-h-screen bg-background">
+			<Header />
+			<main>
+				<Hero />
+				<Solutions />
+				<Process />
+				<CTA />
+			</main>
+			<Footer />
+		</div>
+	);
 };
 
 export default Index;
