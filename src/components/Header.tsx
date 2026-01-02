@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img
             src="/images/logo.webp"
             fetchPriority="high"
@@ -43,6 +43,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
+          type="button"
           className="md:hidden p-2 text-foreground"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
