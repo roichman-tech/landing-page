@@ -10,8 +10,8 @@ import type {
   MetaContent,
 } from '@/app/i18n/home';
 
-import { Footer } from '@/view/layouts/footer';
-import { Header } from '@/view/layouts/header';
+import Footer from '@/view/layouts/footer.astro';
+import Header from '@/view/layouts/header.astro';
 
 interface LayoutProps {
   lang?: string;
@@ -103,7 +103,7 @@ const footerProps =
     <link rel="alternate" hreflang="en" href="https://roichman.tech/en" />
   </head>
   <body class="bg-background text-foreground font-sans antialiased">
-    <Header content={headerProps} client:load />
+    <Header content={headerProps} />
 
     <main>
       <slot />
