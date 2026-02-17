@@ -24,10 +24,6 @@ export const homeEn: HomeTranslations = {
     description:
       'We build reliable software with clean code, predictable delivery, and long-term support. Web systems, mobile apps, integrations, and more.',
   },
-  alternates: [
-    { lang: 'pt-BR', href: '/' },
-    { lang: 'en', href: '/en' },
-  ],
   header: {
     navLinks: [
       { href: '#solutions', label: 'Solutions' },

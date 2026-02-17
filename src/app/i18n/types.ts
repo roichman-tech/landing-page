@@ -101,7 +101,6 @@ export interface HomeTranslations {
   locale: Locale;
   lang: string;
   meta: MetaContent;
-  alternates: AlternateLink[];
   header: HeaderContent;
   hero: HeroContent;
   solutions: SolutionsContent;

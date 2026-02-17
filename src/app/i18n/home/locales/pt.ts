@@ -25,10 +25,6 @@ export const homePt: HomeTranslations = {
     description:
       'Desenvolvemos software sob medida com foco em qualidade, prazos e resultados de longo prazo. Sistemas web, apps mobile, integrações e mais.',
   },
-  alternates: [
-    { lang: 'pt-BR', href: '/' },
-    { lang: 'en', href: '/en' },
-  ],
   header: {
     navLinks: [
       { href: '#solucoes', label: 'Soluções' },
