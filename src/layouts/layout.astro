@@ -1,6 +1,8 @@
 ---
 import '@/styles/global.css';
 
+import Analytics from '@vercel/analytics/astro'
+
 import type {
   AlternateLink,
   FooterContent,
@@ -110,5 +112,7 @@ const footerProps =
     </main>
 
     <Footer content={footerProps} />
+
+    <Analytics />
   </body>
 </html>
